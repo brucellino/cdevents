@@ -3,6 +3,11 @@ import { HmacSHA256, enc } from 'crypto-js';
 
 const app = new Hono();
 
+// handleEvent is a function which parses the payload of the webhook and decides what kind of event it is
+async function handleEvent(payload: any) {
+  console.log(payload);
+}
+
 app.get('/', (c) => {
   return c.text("CD Events on Cloudflare")
 })
@@ -26,6 +31,8 @@ app.post('/webhooks/github', async (c) => {
     return c.json({ error: 'Webhook signature verification failed' }, 401);
   }
 
+  const subscribedEvents = await c.env.cloud_events_brucellino.get("allowed_events");
+  console.log(subscribedEvents);
   return c.json({ message: 'Webhook received!' }, 200);
 
 });
