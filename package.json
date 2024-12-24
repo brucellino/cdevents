@@ -1,5 +1,6 @@
 {
   "name": "cloudflare-workers-openapi",
+  "type": "module",
   "version": "0.0.1",
   "private": true,
   "scripts": {
@@ -13,12 +14,17 @@
     "cloudevents": "^8.0.0",
     "crypto-js": "^4.2.0",
     "hono": "^4.4.7",
+    "inquirer": "^12.3.0",
     "zod": "^3.23.8"
   },
   "devDependencies": {
     "@cloudflare/workers-types": "^4.20241216.0",
+    "@eslint/js": "^9.17.0",
     "@types/node": "20.8.3",
     "@types/service-worker-mock": "^2.0.1",
+    "eslint": "^9.17.0",
+    "globals": "^15.14.0",
+    "typescript-eslint": "^8.18.2",
     "wrangler": "^3.60.3"
   }
 }
