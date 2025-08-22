@@ -1,5 +1,5 @@
 #:schema node_modules/wrangler/config-schema.json
-name = "cdevents"
+name = "cdevents-adapter-test"
 main = "src/index.ts"
 compatibility_flags = ["nodejs_compat"]
 compatibility_date = "2024-12-16"
